@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'quiniela/core'
 
 require 'coveralls'
 Coveralls.wear!
