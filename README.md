@@ -1,27 +1,20 @@
 # Quiniela::Core
+TODO: Write description here
 
-TODO: Write a gem description
 
 ## Installation
+Add this line to your Gemfile:
+```ruby
+gem 'quiniela-core'
+```
+Run the bundle command to install it.
 
-Add this line to your application's Gemfile:
-
-    gem 'quiniela-core'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install quiniela-core
 
 ## Usage
-
 TODO: Write usage instructions here
 
-## Contributing
 
+## Contributing
 1. Fork it ( https://github.com/[my-github-username]/quiniela-core/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)

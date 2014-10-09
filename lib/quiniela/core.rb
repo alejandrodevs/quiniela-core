@@ -1,4 +1,4 @@
-require "quiniela/core/version"
+require 'quiniela/core/version'
 
 module Quiniela
   module Core
