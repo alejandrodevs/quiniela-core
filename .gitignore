@@ -21,3 +21,6 @@ tmp
 *.a
 mkmf.log
 .rvmrc
+*/.DS_Store
+.DS_Store
+.DS_Store?
