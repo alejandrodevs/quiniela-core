@@ -12,7 +12,7 @@ module Quiniela::Core
 
     def test_subscribe
       subscription = UseCases::SubscribeUserToQuiniela.subscribe(@user, @quiniela)
-      assert_kind_of Entities::Subscription, subscription
+      assert_instance_of Entities::Subscription, subscription
       assert_equal({
         id: 1,
         quiniela_id: @quiniela.id,

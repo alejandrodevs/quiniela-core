@@ -7,7 +7,7 @@ module Quiniela::Core
         name: 'Alejandro Gutiérrez',
         email: 'alejandrodevs@gmail.com'
       })
-      assert_kind_of Entities::User, user
+      assert_instance_of Entities::User, user
       assert_equal({
         id: 1,
         name: 'Alejandro Gutiérrez',
