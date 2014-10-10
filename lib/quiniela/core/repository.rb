@@ -2,15 +2,21 @@ module Quiniela
   module Core
     class Repository
       class << self
-        attr_accessor :adapter
-
         def for(type)
-          repositories[type] ||= build_repository_for(type)
+          repositories[type]
         end
 
-        def build_repository_for(type)
-          Repositories::QuinielaRepository::InMemory.new
+        def register(type, repo)
+          repositories[type] = repo
         end
+
+        def reset
+          repositories.each do |type, repo|
+            repositories[type] = repo.class.new
+          end
+        end
+
+        private
 
         def repositories
           @_repositories ||= {}

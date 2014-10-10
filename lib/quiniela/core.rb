@@ -1,5 +1,4 @@
 require 'obvious'
-require 'active_support/core_ext/string'
 require 'quiniela/core/version'
 require 'quiniela/core/repository'
 
@@ -10,15 +9,17 @@ Dir[File.dirname(__FILE__) + '/core/repositories/*.rb'].each{ |file| require fil
 module Quiniela
   module Core
     class << self
-      attr_accessor :repository
-
       def configure
-        yield
+        yield(self)
       end
 
-      def repository
-        yield Repository
+      def repository(type, repo)
+        Repository.register(type, repo)
       end
     end
+
+    repository :user, Repositories::UserRepository::InMemory.new
+    repository :quiniela, Repositories::QuinielaRepository::InMemory.new
+    repository :subscription, Repositories::SubscriptionRepository::InMemory.new
   end
 end
