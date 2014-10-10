@@ -10,7 +10,7 @@ module Quiniela::Core
       })
     end
 
-    def test_subscribe
+    def test_get
       subscription = UseCases::SubscribeUserToQuiniela.subscribe(@user, @quiniela)
       result = UseCases::GetSubscription.get(@user, @quiniela)
       assert_equal(result, subscription)

@@ -27,6 +27,10 @@ module Quiniela
           raise NotRepositoryMethod.new
         end
 
+        def delete(record)
+          raise NotRepositoryMethod.new
+        end
+
         private
         attr_reader :records
       end

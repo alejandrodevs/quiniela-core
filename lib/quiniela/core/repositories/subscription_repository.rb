@@ -18,6 +18,10 @@ module Quiniela
               end
             end
           end
+
+          def delete(record)
+            records.delete(record.id)
+          end
         end
       end
     end
